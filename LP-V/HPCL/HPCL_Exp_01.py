@@ -1,3 +1,13 @@
+'''
+Madhur Jaripatke
+Roll No. 50
+BE A Computer
+RMDSSOE, Warje, Pune
+
+Problem Statement: Design and implement Parallel Breadth First Search and Depth First Search based on existing 
+algorithms using OpenMP. Use a Tree or an undirected graph for BFS and DFS.
+'''
+
 from collections import deque
 import multiprocessing as mp
 from multiprocessing import Pool

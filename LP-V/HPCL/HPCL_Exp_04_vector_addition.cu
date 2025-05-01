@@ -1,3 +1,14 @@
+/*
+Madhur Jaripatke
+Roll No. 50
+BE A Computer
+RMDSSOE, Warje, Pune
+
+Problem Statement: Write a CUDA Program for:
+1. Addition of two large vectors
+2. Matrix Multiplication using CUDA C
+*/
+
 #include <stdio.h>
 #include <cuda_runtime.h>
 

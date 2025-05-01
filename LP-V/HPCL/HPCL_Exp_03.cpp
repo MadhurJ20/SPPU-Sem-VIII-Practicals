@@ -1,3 +1,12 @@
+/*
+Madhur Jaripatke
+Roll No. 50
+BE A Computer
+RMDSSOE, Warje, Pune
+
+Problem Statement: Implement Min, Max, Sum and Average operations using Parallel Reduction.
+*/
+
 #include <iostream>
 #include <vector>
 #include <omp.h>

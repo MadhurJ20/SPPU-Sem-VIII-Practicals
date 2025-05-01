@@ -7,8 +7,8 @@ This repository contains implementations of parallel computing algorithms using 
 ### 1. Parallel Graph Search (BFS and DFS)
 
 **Files**: 
-- `parallel_graph_search.cpp` (OpenMP implementation)
-- `parallel_graph_search.py` (Python multiprocessing implementation)
+- [`HPCL_Exp_01.cpp`](HPCL_Exp_01.cpp) (OpenMP implementation)
+- [`HPCL_Exp_01.py`](HPCL_Exp_01.py) (Python multiprocessing implementation)
 
 **Algorithms**:
 - Breadth-First Search (BFS): Level-wise traversal of graph
@@ -23,18 +23,18 @@ This repository contains implementations of parallel computing algorithms using 
 **Compilation and Execution**:
 ```bash
 # C++ version
-g++ -fopenmp parallel_graph_search.cpp -o parallel_graph_search
+g++ -fopenmp HPCL_Exp_01.cpp -o parallel_graph_search
 ./parallel_graph_search
 
 # Python version
-python parallel_graph_search.py
+python HPCL_Exp_01.py
 ```
 
 ### 2. Parallel Sorting Algorithms
 
 **Files**:
-- `parallel_sorting.cpp` (OpenMP implementation)
-- `parallel_sorting.py` (Python multiprocessing implementation)
+- [`HPCL_Exp_02.cpp`](HPCL_Exp_02.cpp) (OpenMP implementation)
+- [`HPCL_Exp_02.py`](HPCL_Exp_02.py) (Python multiprocessing implementation)
 
 **Algorithms**:
 - Bubble Sort: O(n²) comparison-based sorting
@@ -48,18 +48,18 @@ python parallel_graph_search.py
 **Compilation and Execution**:
 ```bash
 # C++ version
-g++ -fopenmp parallel_sorting.cpp -o parallel_sorting
+g++ -fopenmp HPCL_Exp_02.cpp -o parallel_sorting
 ./parallel_sorting
 
 # Python version
-python parallel_sorting.py
+python HPCL_Exp_02.py
 ```
 
 ### 3. Parallel Reduction Operations
 
 **Files**:
-- `parallel_reduction.cpp` (OpenMP implementation)
-- `parallel_reduction.py` (Python multiprocessing implementation)
+- [`HPCL_Exp_03.cpp`](HPCL_Exp_03.cpp) (OpenMP implementation)
+- [`HPCL_Exp_03.py`](HPCL_Exp_03.py) (Python multiprocessing implementation)
 
 **Operations**:
 - Minimum value finding
@@ -76,18 +76,18 @@ python parallel_sorting.py
 **Compilation and Execution**:
 ```bash
 # C++ version
-g++ -fopenmp parallel_reduction.cpp -o parallel_reduction
+g++ -fopenmp HPCL_Exp_03.cpp -o parallel_reduction
 ./parallel_reduction
 
 # Python version
-python parallel_reduction.py
+python HPCL_Exp_03.py
 ```
 
 ### 4. CUDA Programs
 
 #### Vector Addition
 
-**File**: `vector_addition.cu`
+**File**: [`HPCL_Exp_04_vector_addition.cu`](HPCL_Exp_04_vector_addition.cu)
 
 **Features**:
 - Element-wise addition of two vectors
@@ -97,13 +97,13 @@ python parallel_reduction.py
 
 **Compilation and Execution**:
 ```bash
-nvcc vector_addition.cu -o vector_addition
+nvcc HPCL_Exp_04_vector_addition.cu -o vector_addition
 ./vector_addition
 ```
 
 #### Matrix Multiplication
 
-**File**: `matrix_multiplication.cu`
+**File**: [`HPCL_Exp_04_matrix_multiplication.cu`](HPCL_Exp_04_matrix_multiplication.cu)
 
 **Features**:
 - Dense matrix multiplication
@@ -113,7 +113,7 @@ nvcc vector_addition.cu -o vector_addition
 
 **Compilation and Execution**:
 ```bash
-nvcc matrix_multiplication.cu -o matrix_multiplication
+nvcc HPCL_Exp_04_matrix_multiplication.cu -o matrix_multiplication
 ./matrix_multiplication
 ```
 
