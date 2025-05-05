@@ -83,10 +83,11 @@ g++ -fopenmp HPCL_Exp_03.cpp -o parallel_reduction
 python HPCL_Exp_03.py
 ```
 
-### 4. CUDA Programs
+### 4. Parallel Vector and Matrix Operations
 
-#### Vector Addition
+#### A. CUDA Implementation
 
+##### Vector Addition
 **File**: [`HPCL_Exp_04_vector_addition.cu`](HPCL_Exp_04_vector_addition.cu)
 
 **Features**:
@@ -97,12 +98,11 @@ python HPCL_Exp_03.py
 
 **Compilation and Execution**:
 ```bash
-nvcc HPCL_Exp_04_vector_addition.cu -o vector_addition
-./vector_addition
+nvcc HPCL_Exp_04_vector_addition.cu -o vector_addition_cuda
+./vector_addition_cuda
 ```
 
-#### Matrix Multiplication
-
+##### Matrix Multiplication
 **File**: [`HPCL_Exp_04_matrix_multiplication.cu`](HPCL_Exp_04_matrix_multiplication.cu)
 
 **Features**:
@@ -113,8 +113,42 @@ nvcc HPCL_Exp_04_vector_addition.cu -o vector_addition
 
 **Compilation and Execution**:
 ```bash
-nvcc HPCL_Exp_04_matrix_multiplication.cu -o matrix_multiplication
-./matrix_multiplication
+nvcc HPCL_Exp_04_matrix_multiplication.cu -o matrix_multiplication_cuda
+./matrix_multiplication_cuda
+```
+
+#### B. OpenMP Implementation
+
+##### Vector Addition
+**File**: [`HPCL_Exp_04_vector_addition_omp.cpp`](HPCL_Exp_04_vector_addition_omp.cpp)
+
+**Features**:
+- Parallel vector addition using OpenMP
+- Comparison of sequential vs parallel performance
+- Memory-efficient implementation
+- Automatic work distribution among threads
+- Handles vectors of various sizes (1M to 50M elements)
+
+**Compilation and Execution**:
+```bash
+g++ -fopenmp HPCL_Exp_04_vector_addition_omp.cpp -o vector_addition_omp
+./vector_addition_omp
+```
+
+##### Matrix Multiplication
+**File**: [`HPCL_Exp_04_matrix_multiplication.cpp`](HPCL_Exp_04_matrix_multiplication.cpp)
+
+**Features**:
+- Dense matrix multiplication using OpenMP
+- Nested parallelism with collapse clause
+- Efficient cache utilization
+- Automatic workload distribution
+- Supports various matrix sizes (100x100 to 1000x1000)
+
+**Compilation and Execution**:
+```bash
+g++ -fopenmp HPCL_Exp_04_matrix_multiplication.cpp -o matrix_multiplication_omp
+./matrix_multiplication_omp
 ```
 
 ## Requirements
@@ -188,3 +222,27 @@ nvcc HPCL_Exp_04_matrix_multiplication.cu -o matrix_multiplication
    - Verify GPU availability: `nvidia-smi`
    - Check CUDA path: `echo $PATH | grep cuda`
    - Ensure correct compute capability
+
+## Dataset Description
+
+### Vector Operations Dataset
+The vector operations are tested on randomly generated datasets with the following characteristics:
+- Small vectors: 1 million elements (1M)
+- Medium vectors: 10 million elements (10M)
+- Large vectors: 50 million elements (50M)
+- Data type: Double-precision floating-point numbers
+- Value range: Random values between 0 and 99
+
+### Matrix Operations Dataset
+The matrix multiplication operations are evaluated using randomly generated square matrices:
+- Small matrices: 100 × 100 elements
+- Medium matrices: 500 × 500 elements
+- Large matrices: 1000 × 1000 elements
+- Data type: Double-precision floating-point numbers
+- Value range: Random values between 0 and 99
+
+### Performance Evaluation
+- Each operation is performed multiple times to ensure consistent timing
+- Both sequential and parallel implementations are tested on identical datasets
+- Results include execution time and speedup metrics
+- Correctness verification is performed by comparing sequential and parallel outputs

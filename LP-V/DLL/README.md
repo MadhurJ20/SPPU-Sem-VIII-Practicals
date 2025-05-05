@@ -37,6 +37,22 @@ Each experiment is provided in both Python script (.py) and Jupyter Notebook (.i
 - Model: Convolutional Neural Network
 - Type: Multi-class Classification Problem
 
+### 4. Google Stock Price Prediction using RNN
+
+- Files:
+  - [Python Script](DLL_Exp_04.py)
+  - [Jupyter Notebook](DLL_Exp_04.ipynb) (Recommended)
+- Dataset: Google (GOOGL) Stock Price History
+  - Download: Automatic using yfinance
+  - Data Range: Last 5 years of daily prices
+- Model: Stacked LSTM (Long Short-Term Memory)
+- Type: Time Series Prediction
+- Features:
+  - Real-time data fetching
+  - Sliding window sequence generation
+  - Future price prediction
+  - Interactive visualizations
+
 ## Dataset Information
 
 All datasets used in these implementations are conveniently available through TensorFlow's built-in datasets module (`tensorflow.keras.datasets`). They will be automatically downloaded when running the respective scripts for the first time.
@@ -65,6 +81,8 @@ DLL/
 ├── DLL_Exp_02.ipynb         # Sentiment analysis (Notebook)
 ├── DLL_Exp_03.py            # Fashion item classification
 ├── DLL_Exp_03.ipynb         # Fashion item classification (Notebook)
+├── DLL_Exp_04.py            # Stock price prediction
+├── DLL_Exp_04.ipynb         # Stock price prediction (Notebook)
 ├── requirements.txt         # Python dependencies
 └── README.md                # This file
 ```

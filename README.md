@@ -27,9 +27,14 @@ Parallel computing implementations using OpenMP, Python multiprocessing, and CUD
 - [C++ Implementation](LP-V/HPCL/HPCL_Exp_03.cpp) (OpenMP)
 - [Python Implementation](LP-V/HPCL/HPCL_Exp_03.py) (Multiprocessing)
 
-#### CUDA Programming
+#### Vector and Matrix Operations
+##### CUDA Implementation
 - [Vector Addition](LP-V/HPCL/HPCL_Exp_04_vector_addition.cu)
 - [Matrix Multiplication](LP-V/HPCL/HPCL_Exp_04_matrix_multiplication.cu)
+
+##### OpenMP Implementation
+- [Vector Addition](LP-V/HPCL/HPCL_Exp_04_vector_addition.cpp)
+- [Matrix Multiplication](LP-V/HPCL/HPCL_Exp_04_matrix_multiplication.cpp)
 
 [View HPC Lab →](LP-V/HPCL/)
 
@@ -54,6 +59,22 @@ Implementation of NLP algorithms and techniques:
 
 [View NLP Lab →](LP-VI/NLPL/)
 
+## Dataset Information
+
+### Deep Learning Lab Datasets
+- Boston Housing Dataset: 506 samples with 13 features for regression
+- IMDB Movie Reviews: 50,000 movie reviews for sentiment analysis
+- Fashion MNIST: 70,000 grayscale images (60,000 training, 10,000 testing) in 10 classes
+
+### HPC Lab Test Data
+All HPC experiments use generated datasets to demonstrate scalability:
+- Graph Search: Random graphs of varying sizes (1K-1M vertices)
+- Sorting: Random integer arrays of different sizes (10K-10M elements)
+- Reduction: Large arrays of floating-point numbers (1M-100M elements)
+- Vector/Matrix Operations: 
+  - Vectors: 1M-50M elements
+  - Matrices: 100×100 to 1000×1000 elements
+
 ## Repository Structure
 ```
 .
@@ -68,7 +89,9 @@ Implementation of NLP algorithms and techniques:
 │       ├── HPCL_Exp_01.{cpp,py}    # Graph Algorithms
 │       ├── HPCL_Exp_02.{cpp,py}    # Sorting Algorithms
 │       ├── HPCL_Exp_03.{cpp,py}    # Reduction Operations
-│       └── HPCL_Exp_04_*.cu        # CUDA Programs
+│       ├── HPCL_Exp_04_*.cu        # CUDA Programs
+│       ├── HPCL_Exp_04_vector_addition_omp.cpp  # OpenMP Vector Addition
+│       ├── HPCL_Exp_04_matrix_multiplication.cpp  # OpenMP Matrix Multiplication
 └── LP-VI/
     ├── BIL/    # Business Intelligence Laboratory
     └── NLPL/   # Natural Language Processing Laboratory
